@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Mezdeke Batu</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+	<link href="css/1140.css" rel="stylesheet" type="text/css">
+	<link href="css/custom.css" rel="stylesheet" type="text/css"
+	</head>
+<body>
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			<div class="batu">
+		<li class="layer" id="batu" data-depth="1.00"><img src="images/batu.png" ></li>
+		</div>
+			<li class="layer" data-depth="0.80"><img src="images/batu.png"></li>
+			<li class="layer" data-depth="0.60"><img src="images/batu.png"></li>
+			<li class="layer" data-depth="0.40"><img src="images/batu.png"></li>
+			<li class="layer" data-depth="0.20"><img src="images/batu.png"></li>
+			<li class="layer" data-depth="0.04"><img src="images/batu.png"></li>
+		</ul>
+	</div>
+
+
+<audio autoplay>
+  <source src="a.mp3" type="audio/mpeg">
+</audio>
+
+	<script src="deploy/parallax.min.js"></script>
+	<script>
+
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	</script>
+
+</body>
+</html>
