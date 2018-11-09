@@ -28,8 +28,8 @@
 		</ul>
 	</div>
 
-<iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-<audio autoplay loop>
+<iframe src="a.mp3" allow="autoplay" id="audio" style="display:none" id="iframeAudio"></iframe>
+<audio autoplay loop id="playAudio">
   <source src="a.mp3" type="audio/mpeg">
 </audio>
 
@@ -38,7 +38,14 @@
 
 	var scene = document.getElementById('scene');
 	var parallax = new Parallax(scene);
-
+		
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+  }
 	</script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
